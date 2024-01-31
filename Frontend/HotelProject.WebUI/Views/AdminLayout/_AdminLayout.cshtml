@@ -1,0 +1,53 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+
+    @await Html.PartialAsync("/Views/AdminLayout/HeadPartial.cshtml")
+<body>
+
+    <!--*******************
+        Preloader start
+    ********************-->
+    @await Html.PartialAsync("/Views/AdminLayout/PreloaderPartial.cshtml")
+    <!--*******************
+        Preloader end
+    ********************-->
+    <!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper">
+
+        <!--**********************************
+            Nav header start
+        ***********************************-->
+        @await Html.PartialAsync("/Views/AdminLayout/NavheaderPartial.cshtml")
+
+
+        @await Html.PartialAsync("/Views/AdminLayout/HeaderPartial.cshtml")
+
+        @await Html.PartialAsync("/Views/AdminLayout/SidebarPartial.cshtml")
+        <div class="content-body">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <p>@RenderBody()</p>
+                                <br />
+                                @await Html.PartialAsync("/Views/AdminLayout/HeadPartial.cshtml")
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #/ container -->
+        </div>
+    </div>
+
+    @await Html.PartialAsync("/Views/AdminLayout/ScriptPartial.cshtml")
+</body>
+
+</html>
