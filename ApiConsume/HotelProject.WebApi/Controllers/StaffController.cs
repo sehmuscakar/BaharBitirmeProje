@@ -2,6 +2,7 @@
 using HotelProject.EntityLayer.Concrete;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Localization;
 
 namespace HotelProject.WebApi.Controllers
 {
@@ -30,7 +31,7 @@ namespace HotelProject.WebApi.Controllers
             _staffService.TInsert(staff);
             return Ok();
         }
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult DeleteStaff(int id)
         {
             var values = _staffService.TGetByID(id);
@@ -47,7 +48,7 @@ namespace HotelProject.WebApi.Controllers
         public IActionResult GetStaff(int id)
         {
             var values = _staffService.TGetByID(id);
-            return Ok();
+            return Ok(values);
         }
     }
 }
