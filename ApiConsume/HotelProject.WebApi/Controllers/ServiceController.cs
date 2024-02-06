@@ -29,7 +29,7 @@ namespace HotelProject.WebApi.Controllers
             _serviceService.TInsert(service);
             return Ok();
         }
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult DeleteService(int id)
         {
             var values = _serviceService.TGetByID(id);
@@ -47,7 +47,7 @@ namespace HotelProject.WebApi.Controllers
         public IActionResult GetService(int id)
         {
             var values = _serviceService.TGetByID(id);
-            return Ok();
+            return Ok(values);
         }
     }
 }
