@@ -47,7 +47,7 @@ namespace HotelProject.WebApi.Controllers
         public IActionResult GetBooking(int id)
         {
             var values = _bookingService.TGetByID(id);
-            return Ok();
+            return Ok(values);
         }
 
         [HttpPut("aaaaaa")]

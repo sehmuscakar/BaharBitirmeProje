@@ -47,7 +47,7 @@ namespace HotelProject.WebApi.Controllers
         public IActionResult GetTestimonial(int id)
         {
             var values = _testimonialService.TGetByID(id);
-            return Ok();
+            return Ok(values);
         }
     }
 }
