@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace HotelProject.EntityLayer.Concrete
+﻿namespace HotelProject.WebUI.Dtos.ContactDto
 {
-   public class SendMessage //Giden Mesaj Sayısı
+    public class GetMessageByIDDto
+
     {
         public int SendMessageID { get; set; }
 
@@ -18,6 +13,5 @@ namespace HotelProject.EntityLayer.Concrete
         public string Title { get; set; }
         public string Content { get; set; }
         public DateTime Date { get; set; }
-
     }
 }
