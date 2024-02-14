@@ -22,11 +22,6 @@ namespace HotelProject.WebUI.Controllers
         {
             return PartialView();
         }
-
-        public PartialViewResult HeaderPartial()
-        {
-            return PartialView();
-        }
         public PartialViewResult SidebarPartial()
         {
             return PartialView();

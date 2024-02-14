@@ -19,8 +19,7 @@
                             <th>Onayla</th>
                             <th>İptal Et</th>
                             <th>Beklet</th>
-                            <th>Güncelle</th>
-                            <th>Detaylar</th>
+                       
                         </tr>
                     </thead>
                     <tbody>
@@ -36,11 +35,10 @@
                                 <span class="badge badge-primary px-2">@item.Status</span>
                             </td>
 
-                             <td>  <a href="/BookingAdmin/ApproverReservation/@item.BookingID/" class="btn btn-outline-primary">Onayla</a> </td>
-                             <td> <a href="#" class="btn btn-outline-danger">İptal Et</a></td>
-                             <td> <a href="#" class="btn btn-outline-warning">Beklet</a> </td>
-                             <td> <a href="#" class="btn btn-outline-info">Güncelle</a>  </td>
-                             <td> <a href="#" class="btn btn-outline-dark">Detaylar</a>  </td>
+                    <td>  <a href="/BookingAdmin/AppRoverRezervation2/@item.BookingID" class="btn btn-outline-primary">Onayla</a> </td>
+                    <td> <a href="/BookingAdmin/RezervationCancel/@item.BookingID" class="btn btn-outline-danger">İptal Et</a></td>
+                    <td> <a href="/BookingAdmin/RezervationWait/@item.BookingID" class="btn btn-outline-warning">Beklet</a> </td>
+                         
                          
                            
                         </tr>

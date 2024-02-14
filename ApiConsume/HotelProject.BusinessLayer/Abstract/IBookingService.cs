@@ -7,8 +7,22 @@ using System.Threading.Tasks;
 
 namespace HotelProject.BusinessLayer.Abstract
 {
-    public interface IBookingService:IGenericeService<Booking>
+    public interface IBookingService : IGenericeService<Booking>
     {
-        void TBookingStatusChangeApproverd(Booking booking);
+
+
+        int TGetBookingCount();
+
+
+        List<Booking> TLast6Bookings();
+
+        void TBookingStatusChangeApproved3(int id);
+
+        void TBookingStatusChangeCancel(int id);
+
+        void BookingStatusChangeWait(int id);
+
+
+
     }
 }
