@@ -7,12 +7,10 @@
 <table class="table table-bordered">
     <tr>
         <th>#</th>
-        <th>Referans Görsel</th>
         <th>Referans Adı</th>     
         <th>Referans Ünvanı</th>     
         <th>Sil</th>
         <th>Güncelle</th>
-        <th>Detaylar</th>
     </tr>
     @foreach (var item in Model)
     {
@@ -20,14 +18,13 @@
                 <th>@item.TestimonialID</th>
                 <th>@item.Name</th>
                 <th>@item.Title</th>
-            <th><a href="/Staff/DeleteTestimonial/@item.TestimonialID" class="btn mb-1 btn-rounded btn-outline-danger">Sil</a></th>
-            <th><a href="/Staff/UpdateTestimonial/@item.TestimonialID" class="btn mb-1 btn-rounded btn-outline-success">Güncelle</a></th>
-                <th><a href="#" class="btn mb-1 btn-rounded btn-outline-dark">Detaylar</a></th>
+            <th><a href="/Testimonial/DeleteTestimonial/@item.TestimonialID" class="btn mb-1 btn-rounded btn-outline-danger">Sil</a></th>
+            <th><a href="/Testimonial/UpdateTestimonial/@item.TestimonialID" class="btn mb-1 btn-rounded btn-outline-success">Güncelle</a></th>
             </tr>
     }
 </table>
 
-<a href="/Staff/AddStaff/" class="btn mb-1 btn-rounded btn-outline-info">Yeni Personel Girişi</a>
+<a href="/Testimonial/AddTestimonial/" class="btn mb-1 btn-rounded btn-outline-info">Yeni Referans Girişi</a>
 
 
 

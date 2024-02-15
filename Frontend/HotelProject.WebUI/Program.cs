@@ -18,19 +18,19 @@ builder.Services.AddAutoMapper(typeof(Program));
 builder.Services.AddHttpClient();
 builder.Services.AddDbContext<Context>();
 builder.Services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<Context>();
-//builder.Services.AddMvc(config =>
-//{
-//    var policy = new AuthorizationPolicyBuilder()
-//    .RequireAuthenticatedUser()//otantike olmasý için kullanýcý giriþi zorunlu
-//    .Build();
-//    config.Filters.Add(new AuthorizeFilter(policy));
-//});
-//builder.Services.ConfigureApplicationCookie(options =>
-//{
-//    options.Cookie.HttpOnly= true;
-//    options.ExpireTimeSpan = TimeSpan.FromMinutes(10);//10 dakika te otantike olacak
-//    options.LoginPath = "/Login/Index";
-//});
+builder.Services.AddMvc(config =>
+{
+    var policy = new AuthorizationPolicyBuilder()
+    .RequireAuthenticatedUser()//otantike olmasý için kullanýcý giriþi zorunlu
+    .Build();
+    config.Filters.Add(new AuthorizeFilter(policy));
+});
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.Cookie.HttpOnly = true;
+    options.ExpireTimeSpan = TimeSpan.FromMinutes(10);//10 dakika te otantike olacak
+    options.LoginPath = "/Login/Index";
+});
 
 
 

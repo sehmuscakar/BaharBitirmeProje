@@ -4,7 +4,7 @@ using System.Net.Http.Headers;
 
 namespace HotelProject.WebUI.Controllers
 {
-    public class AdminImageFileController : Controller
+    public class AdminImageFileController : Controller //images klsörüne yukluyor resimi
     {
         [HttpGet]
         public IActionResult Index()

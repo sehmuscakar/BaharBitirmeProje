@@ -3,7 +3,7 @@ using System.Net.Http.Headers;
 
 namespace HotelProject.WebUI.Controllers
 {
-    public class AdminFileController : Controller
+    public class AdminFileController : Controller // files klasörüne yukluyor dosyayı
     {
         [HttpGet]
         public IActionResult Index()

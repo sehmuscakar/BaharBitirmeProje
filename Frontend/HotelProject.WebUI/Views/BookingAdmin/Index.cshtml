@@ -13,8 +13,8 @@
                         <tr>
                             <th>#</th>
                             <th>Misafir</th>
-                            <th>Giriş Tarihi</th>
-                            <th>Çıkış Tarihi</th>
+                            <th>Yetişkin Sayısı</th>
+                            <th>Çocuk Sayısı</th>
                             <th>Durum</th>
                             <th>Onayla</th>
                             <th>İptal Et</th>
@@ -29,8 +29,12 @@
                             <tr>
                             <th>@count</th>
                                 <td>@item.Name</td>
-                            <td>@(((DateTime)item.Checkin).ToString("dd-MMM-yyyy"))</td>
-                    <td>@(((DateTime)item.CheckOut).ToString("dd-MMM-yyyy"))</td>
+               
+
+                    <td>@item.AdulCount</td>
+                     <td>@item.ChildCount</td>
+
+                          
                             <td>
                                 <span class="badge badge-primary px-2">@item.Status</span>
                             </td>
